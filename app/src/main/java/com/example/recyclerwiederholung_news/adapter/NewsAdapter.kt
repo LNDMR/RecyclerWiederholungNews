@@ -1,5 +1,6 @@
 package com.example.recyclerwiederholung_news.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,9 +13,9 @@ import com.example.recyclerwiederholung_news.R
 import com.example.recyclerwiederholung_news.data.model.NewsArticle
 import com.example.recyclerwiederholung_news.ui.HomeFragmentDirections
 
-class NewsAdapter(
-    private val dataset: List<NewsArticle>
-) : RecyclerView.Adapter<NewsAdapter.ItemViewHolder>() {
+class NewsAdapter() : RecyclerView.Adapter<NewsAdapter.ItemViewHolder>() {
+
+    private var dataset = listOf<NewsArticle>()
 
     class ItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val title: TextView = view.findViewById(R.id.news_title_text)
@@ -22,6 +23,12 @@ class NewsAdapter(
         val date: TextView = view.findViewById(R.id.news_date_text)
         val image: ImageView = view.findViewById(R.id.news_image)
         val card: CardView = view.findViewById(R.id.news_card)
+    }
+
+    fun submittList(list: List<NewsArticle>) {
+        dataset = list
+        notifyDataSetChanged()
+        Log.d("NewsAdapter", "newslist is submitted")
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
@@ -32,16 +39,16 @@ class NewsAdapter(
     }
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        val item = dataset[position]
+        val newsArticle: NewsArticle = dataset[position]
 
-        holder.title.text = item.title
-        holder.location.text = item.location
-        holder.date.text = item.date
-        holder.image.setImageResource(item.imageResourceId)
+        holder.title.text = newsArticle.title
+        holder.location.text = newsArticle.location
+        holder.date.text = newsArticle.date
+        holder.image.setImageResource(newsArticle.imageResourceId)
 
         holder.card.setOnClickListener {
             holder.itemView.findNavController()
-                .navigate(HomeFragmentDirections.actionHomeFragmentToDetailFragment(item.id))
+                .navigate(HomeFragmentDirections.actionHomeFragmentToDetailFragment(newsArticle.id))
         }
     }
 
