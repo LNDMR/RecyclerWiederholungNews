@@ -13,7 +13,8 @@ class Repository {
                 R.drawable.raubtier,
                 "Deutschland",
                 "23.01.2023",
-                "auchtung achtung!\nDie fressen dich"
+                "auchtung achtung!\nDie fressen dich Die fressen dich √ √ Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich ressen dich Die fressen dich √ √ Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen ressen dich Die fressen dich √ √ Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen ressen dich Die fressen dich √ √ Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen dich fressen dich Die fressen dich Die fressen dich Die fressen dich Die fressen",
+                mutableListOf("A comment", "Another comment", "And one more")
             ),
             NewsArticle(
                 2,
@@ -21,7 +22,8 @@ class Repository {
                 R.drawable.ai,
                 "Welt",
                 "26.01.2023",
-                "glaubt doch niemand"
+                "glaubt doch niemand",
+                mutableListOf("A comment", "Another comment", "And one more")
             ),
             NewsArticle(
                 3,
@@ -29,7 +31,8 @@ class Repository {
                 R.drawable.hochhaus,
                 "Schweiz",
                 "28.01.2023",
-                "das ist ein Test"
+                "das ist ein Test",
+                mutableListOf("A comment", "Another comment", "And one more")
             ),
             NewsArticle(
                 4,
@@ -37,7 +40,8 @@ class Repository {
                 R.drawable.leo,
                 "USA",
                 "30.01.2023",
-                "Fände ich super"
+                "Fände ich super",
+                mutableListOf("A comment", "Another comment", "And one more")
             ),
             NewsArticle(
                 5,
@@ -45,7 +49,8 @@ class Repository {
                 R.drawable.cast_away,
                 "USA",
                 "13.01.2023",
-                "ojdifuiaberubfvchcbdskau jbhuhbuzbvuz"
+                "ojdifuiaberubfvchcbdskau jbhuhbuzbvuz",
+                mutableListOf("A comment", "Another comment", "And one more")
             )
         )
     }

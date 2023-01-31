@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.example.recyclerwiederholung_news.MainViewModel
+import com.example.recyclerwiederholung_news.adapter.CommentAdapter
 import com.example.recyclerwiederholung_news.databinding.FreagmentDetailBinding
 
 class DetailFragment: Fragment() {
@@ -26,6 +27,9 @@ class DetailFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val newsId = requireArguments().getInt("newsId")
 
+        val commentAdapter = CommentAdapter()
+        binding.detailCommentRecycler.adapter = commentAdapter
+
         viewModel.news.observe(viewLifecycleOwner) { list ->
             val article = list.find { it.id == newsId }
 
@@ -35,6 +39,10 @@ class DetailFragment: Fragment() {
                 binding.detailDateText.text = article.date
                 binding.detailArticleText.text = article.article
             }
+        }
+
+        viewModel.commentList.observe(viewLifecycleOwner) {
+            commentAdapter.submitList(it)
         }
     }
 }

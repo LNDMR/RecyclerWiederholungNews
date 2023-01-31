@@ -18,11 +18,23 @@ class MainViewModel: ViewModel() {
     val news: LiveData<List<NewsArticle>>
             get() = _news
 
+    private val _commentList = MutableLiveData<List<String>>()
+    val commentList: LiveData<List<String>>
+        get() = _commentList
+
     init {
         loadNews()
         // ausgelagert
         //_news.value = repository.loadNews()
         Log.d("MainViewModel", "newslist is loading")
+    }
+
+    fun loadComments(id: Int) {
+        val article = _news.value?.find { it.id == id}
+
+        if(article != null) {
+            _commentList.value = article.comment
+        }
     }
 
     private fun loadNews() {

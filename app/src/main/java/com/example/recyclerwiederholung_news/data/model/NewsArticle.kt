@@ -6,5 +6,6 @@ data class NewsArticle(
     val imageResourceId: Int,
     val location: String,
     val date: String,
-    val article: String
+    val article: String,
+    val comment: MutableList<String>
 )
